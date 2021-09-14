@@ -1,21 +1,23 @@
 /**PAGE SETUP**/
-.blocpage, .footer{
-    font-family: 'Roboto', sans-serif;
-    font-size: 100%;
-    max-width: 1440px;
+.blocpage, .footer {
+  font-family: "Roboto", sans-serif;
+  font-size: 100%;
+  max-width: 1440px;
 }
 
-.header > a, .footerLogo > a{
-    font-family: 'shrikhand';
-    color: black;
-    text-decoration: none;
+.header > a, .footerLogo > a {
+  font-family: "shrikhand";
+  color: black;
+  text-decoration: none;
 }
 
-h3 > a{
-    text-decoration: none;
-    color: black;
+h3 > a {
+  text-decoration: none;
+  color: black;
 }
 
-.fas{
-    color: black;
+.fas {
+  color: black;
 }
+
+/*# sourceMappingURL=style.css.map */
