@@ -1,22 +1,239 @@
 /**PAGE SETUP**/
+@import "./libs/reset.scss";
+
+$policeTitle: "shrikhand", serif;
+$fontSize: 14px;
+$iconColor:#7e7e7e;
+$backGrey:#f6f6f6;
+$backFooter: #353535;
+$primaryColor:#9356dc;
+$secondaryColor:#ff79da;
+$tertiaryColor:#99e2d0;
+
+body{
+    font-size: $fontSize;
+}
+
 .blocpage, .footer{
     font-family: 'Roboto', sans-serif;
     font-size: 100%;
-    max-width: 1440px;
-  }
-  
-  .header > a, .footerLogo > a{
-    font-family: 'shrikhand';
-    color: black;
+}
+
+a{
     text-decoration: none;
-  }
-  
-  h3 > a{
-    text-decoration: none;
+    color: inherit;
+}
+
+.fas {
+    color: $iconColor;
+}
+/*HEADER*/
+
+header{
+    box-shadow: 0px 3px 4px rgb(206, 206, 206)
+}
+
+header, h1{
+    font-family: $policeTitle;
     color: black;
-  }
-  
-  .fas{
-    color: black;
-  }
-  
+    font-size: 1.6rem;
+    padding: 8px 0 5px 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1rem;
+}
+
+/*LOCATION*/
+
+.location{
+    background-color: rgb(234, 234, 234);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(87,87,87);
+    .locationName{
+        margin-left: 13px;
+    }
+}
+
+.locationIcon, .locationName{
+    display: inline-block;
+}
+
+/*SEARCH AREA*/
+
+.search{
+    background-color: $backGrey;
+    padding: 30px 0;
+    .searchContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .searchTitle{
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    .searchP{
+        text-align: center;
+        font-size: 17px;
+        margin: 15px 0 25px 0;
+    }
+    .searchButton{
+        font-weight: bold;
+        color: white;
+        border-radius: 50px;
+        border: none;
+        box-shadow: rgba($color: #000000, $alpha: 0.2);
+        padding: 15px 20px 15px 20px;
+        background-image: linear-gradient(to bottom right, $secondaryColor, $primaryColor);
+        margin: 10px 0 30px 0;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.06);
+            transition-duration: 300ms;
+            cursor: pointer;
+        }
+    }
+}
+
+/*CUSTOM STEPS*/
+
+.customContainer{
+    padding: 2rem 0;
+    .custom{
+        display: flex;
+        flex-direction: column;
+    }
+    .customTitle{
+        margin: 0 0 10px 10px;
+    }
+    .customStepsGrid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .customStep{
+        padding: 15px 20px;
+        background-color: $backGrey;
+        position: relative;
+        box-shadow: 0px 0px 2px 0px;
+        margin: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.03);
+            transition-duration: 300ms;
+            cursor: pointer;
+        }
+    }
+    .customNumber{
+        background-color: $primaryColor;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 500px;
+        transform: translateX(-50%);
+    }
+    .customIcon{
+        margin: 0 20px 0 -5px;
+    }
+}
+
+/*RESTAURANTS*/
+
+.restaurants{
+    background-color: $backGrey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    .restaurantCards{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    .card{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        border-radius: 20px;
+    }
+    .cardImg{
+        height: 160px;
+        width: 100%;
+    }
+    .newCardBox{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        background-color: $tertiaryColor;
+        padding: 5px 15px;
+        top: 20px;
+        right: 20px;
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    .cardTextBloc{
+        background-color: white;
+        margin-top: -5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+        border-radius: 0 0 20px 20px;
+        .textBloc{
+            padding: 15px;
+            .cardName{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/*FOOTER*/
+
+.footer{
+    background-color: $backFooter;
+    color: white;
+    padding: 20px 0 25px 20px;
+    width: 100%;
+    .footerBloc{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .footerLogo{
+        font-family: $policeTitle;
+    }
+    .footerLink{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        cursor: pointer;
+        .fas{
+            margin-right: 10px;
+            color: white;
+        }
+    }
+}
