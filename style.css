@@ -65,6 +65,21 @@ a {
 /*HEADER*/
 header {
   box-shadow: 0px 3px 4px #cecece;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .headerBackArrow > a > .fas {
+  color: #353535;
+}
+header .headerBackArrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 10px;
+  top: 28%;
 }
 
 header, h1 {
@@ -238,6 +253,116 @@ p {
 }
 .restaurants .cardTextBloc .textBloc .cardName {
   font-weight: bold;
+}
+
+/*IMAGE RESTAURANT PAGES*/
+.photoBloc {
+  width: 100%;
+  height: 50vh;
+}
+.photoBloc .photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*MENU PAGES*/
+.menu {
+  position: relative;
+  margin-top: -80px;
+  padding: 15px 20px;
+  background-color: #f6f6f6;
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+}
+.menu .menuTitleBloc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.menu .menuTitleBloc .menuTitle {
+  font-family: "shrikhand", serif;
+}
+.menu .menuGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+.menu .menuGrid .menuColumn {
+  display: grid;
+  gap: 20px;
+}
+.menu .menuGrid .menuColumn .columnTitle {
+  position: relative;
+  font-size: 19px;
+}
+.menu .menuGrid .menuColumn .columnTitle h3::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #99e2d0;
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: -8px;
+}
+.menu .menuGrid .columnRow {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1rem;
+  height: 4rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.menu .menuGrid .columnRow .platesPrice {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu .menuGrid .columnRow .platesPrice .rowTextBox {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu .menuGrid .columnRow .platesPrice .rowTextBox .rowTextName p {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu .menuGrid .columnRow .platesPrice .rowTextBox .rowTextSide p {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu .menuGrid .columnRow .platesPrice .rowTextBox .rowPrice {
+  padding-right: 20px;
+  margin-left: 20px;
+}
+.menu .menuBtnBloc {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.menu .menuBtnBloc .menuBtn {
+  font-weight: bold;
+  color: white;
+  border-radius: 50px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  padding: 15px 20px 15px 20px;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  margin: 30px 0 25px 0;
+  cursor: pointer;
+}
+.menu .menuBtnBloc .menuBtn:hover {
+  transform: scale(1.06);
+  transition-duration: 300ms;
+  cursor: pointer;
 }
 
 /*FOOTER*/
