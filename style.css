@@ -62,6 +62,32 @@ a {
   color: #7e7e7e;
 }
 
+/*LOADER*/
+.loader {
+  width: 100px;
+  height: 100px;
+  border-top: 6px solid #9356dc;
+  border-left: 6px solid #99e2d0;
+  border-right: 6px solid #99e2d0;
+  border-bottom: 6px solid #ff79da;
+  border-radius: 50%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*HEADER*/
 header {
   box-shadow: 0px 3px 4px #cecece;
@@ -342,6 +368,32 @@ p {
 .menu .menuGrid .columnRow .platesPrice .rowTextBox .rowPrice {
   padding-right: 20px;
   margin-left: 20px;
+}
+.menu .menuGrid .validation {
+  display: none;
+  position: absolute;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 13px;
+  height: 100%;
+}
+.menu .menuGrid .validation i {
+  font-size: 30px;
+  color: white;
+}
+.menu .menuGrid .validation:active {
+  display: none;
+  position: absolute;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 13px;
+  height: 100%;
+}
+.menu .menuGrid .validation:active i {
+  font-size: 30px;
+  color: white;
 }
 .menu .menuBtnBloc {
   display: flex;
