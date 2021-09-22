@@ -10,7 +10,6 @@ $backFooter: #353535;
 $primaryColor:#9356dc;
 $secondaryColor:#ff79da;
 $tertiaryColor:#99e2d0;
-
 body{
     font-size: $fontSize;
 }
@@ -33,7 +32,7 @@ a{
 
 .loaderBox{
     position: relative;
-    background-color: #FFFFFF80;
+    background-color: white;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -41,10 +40,10 @@ a{
         .loader{
         width: 100px;
         height: 100px;
-        border-top: 6px solid $primaryColor;
-        border-left: 6px solid $tertiaryColor;
-        border-right: 6px solid $tertiaryColor;
-        border-bottom: 6px solid $secondaryColor;
+        border-top: 10px solid $primaryColor;
+        border-left: 10px solid $tertiaryColor;
+        border-right: 10px solid $tertiaryColor;
+        border-bottom: 10px solid $secondaryColor;
         border-radius: 50%;
         margin: auto;
         position: fixed;
@@ -204,7 +203,8 @@ p{
         align-items: center;
         cursor: pointer;
         &:hover{
-            transform: scale(1.03);
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 40%);
             transition-duration: 300ms;
             cursor: pointer;
         }
@@ -333,6 +333,7 @@ p{
         }
         .columnRow{
             background-color: white;
+            box-shadow: 3px 3px 3px 3px rgb(206, 206, 206);
             border-radius: 15px;
             padding: 1rem;
             height: 4rem;
@@ -343,8 +344,7 @@ p{
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            &:active{
-                .validation{
+            &:hover .validation{
                     display: block;
                     position: absolute;
                     background-color: $tertiaryColor;
@@ -352,15 +352,15 @@ p{
                     right: 0px;
                     padding: 0 13px;
                     height: 100%;
+                    animation: slide-left 0.5s ease;
                     i{
-                        padding: 15px;
                         font-size: 30px;
                         color: white;
                         transform: rotate(180deg);
                         animation: rotate 0.5s both;
                     }
                 }
-            }
+            
             .platesPrice{
                 width: 100%;
                 display: flex;
@@ -382,6 +382,10 @@ p{
                     .rowPrice{
                         padding-right: 20px;
                         margin-left: 20px;
+                        &:hover .rowPrice{
+                            padding-right: 70px;
+                            transition: 0.5s ease;
+                        }
                     }
                 }
             }
@@ -401,7 +405,25 @@ p{
                 }
             }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
     }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+            
+@keyframes slide-left {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(-50px);
+    }
+}
+}
+
     .menuBtnBloc{
         display: flex;
         justify-content: center;
@@ -424,6 +446,60 @@ p{
         }
     }
 }
+
+.appearance{
+    animation: opacity 1s both;
+}
+
+#row1{
+    animation-delay: 0.1s;
+}
+
+#row2{
+    animation-delay: 0.2s;
+}
+
+#row3{
+    animation-delay: 0.3s;
+}
+
+#row4{
+    animation-delay: 0.4s;
+}
+
+#row5{
+    animation-delay: 0.5s;
+}
+
+#row6{
+    animation-delay: 0.6s;
+}
+
+#row7{
+    animation-delay: 0.7s;
+}
+
+#row8{
+    animation-delay: 0.8s;
+}
+
+#row9{
+    animation-delay: 0.9s;
+}
+
+#row10{
+    animation-delay: 1s;
+}
+
+@keyframes opacity {
+    0% {
+              opacity: 0;
+    }
+    100% {
+              opacity: 1;
+    }
+  }
+
 
 /*FOOTER*/
 
