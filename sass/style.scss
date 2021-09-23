@@ -276,6 +276,17 @@ p{
             .cardName{
                 font-weight: bold;
             }
+            .cardHeart{
+                position: absolute;
+                right: 18px;
+                bottom: 20px;
+                i{
+                    font-size: 1.4rem;
+                }
+                .far{
+                    right: 0.8px;
+                }
+            }
         }
     }
 }
@@ -308,6 +319,17 @@ p{
         margin-bottom: 1.5rem;
         .menuTitle{
             font-family: $policeTitle;
+        }
+        .cardHeart{
+            right: 0px;
+            bottom: 0px;
+            i{
+                font-size: 1.4rem;
+            }
+            .far{
+                cursor: pointer;
+                right: 0px;
+            }
         }
     }
     .menuGrid{

@@ -305,6 +305,17 @@ p {
 .restaurants .cardTextBloc .textBloc .cardName {
   font-weight: bold;
 }
+.restaurants .cardTextBloc .textBloc .cardHeart {
+  position: absolute;
+  right: 18px;
+  bottom: 20px;
+}
+.restaurants .cardTextBloc .textBloc .cardHeart i {
+  font-size: 1.4rem;
+}
+.restaurants .cardTextBloc .textBloc .cardHeart .far {
+  right: 0.8px;
+}
 
 /*IMAGE RESTAURANT PAGES*/
 .photoBloc {
@@ -334,6 +345,17 @@ p {
 }
 .menu .menuTitleBloc .menuTitle {
   font-family: "shrikhand", serif;
+}
+.menu .menuTitleBloc .cardHeart {
+  right: 0px;
+  bottom: 0px;
+}
+.menu .menuTitleBloc .cardHeart i {
+  font-size: 1.4rem;
+}
+.menu .menuTitleBloc .cardHeart .far {
+  cursor: pointer;
+  right: 0px;
 }
 .menu .menuGrid {
   display: grid;
