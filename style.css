@@ -232,10 +232,13 @@ p {
   cursor: pointer;
 }
 .customContainer .customStep:hover {
-  background-color: white;
+  background-color: #f8f2ff;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
   transition-duration: 300ms;
   cursor: pointer;
+}
+.customContainer .customStep:hover .fas {
+  color: #9356dc;
 }
 .customContainer .customNumber {
   background-color: #9356dc;
@@ -254,12 +257,10 @@ p {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
 }
 .restaurants .restaurantCards {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   padding: 1rem;
 }
 .restaurants .card {
@@ -268,6 +269,11 @@ p {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  border-radius: 20px;
+}
+.restaurants .card a {
+  margin-bottom: 2rem;
+  box-shadow: 0px 3px 4px #cecece;
   border-radius: 20px;
 }
 .restaurants .cardImg {
@@ -305,16 +311,19 @@ p {
 .restaurants .cardTextBloc .textBloc .cardName {
   font-weight: bold;
 }
-.restaurants .cardTextBloc .textBloc .cardHeart {
-  position: absolute;
-  right: 18px;
-  bottom: 20px;
+.restaurants .cardTextBloc .cardHeart {
+  margin-right: 1.5rem;
+  width: 1.5rem;
 }
-.restaurants .cardTextBloc .textBloc .cardHeart i {
-  font-size: 1.4rem;
+.restaurants .cardTextBloc .cardHeart path {
+  fill: transparent;
+  stroke-width: 40px;
+  stroke: black;
+  transition: 0.5s;
 }
-.restaurants .cardTextBloc .textBloc .cardHeart .far {
-  right: 0.8px;
+.restaurants .cardTextBloc .cardHeart:hover path {
+  fill: red;
+  stroke: red;
 }
 
 /*IMAGE RESTAURANT PAGES*/
@@ -347,15 +356,18 @@ p {
   font-family: "shrikhand", serif;
 }
 .menu .menuTitleBloc .cardHeart {
-  right: 0px;
-  bottom: 0px;
-}
-.menu .menuTitleBloc .cardHeart i {
-  font-size: 1.4rem;
-}
-.menu .menuTitleBloc .cardHeart .far {
   cursor: pointer;
-  right: 0px;
+  width: 1.5rem;
+}
+.menu .menuTitleBloc .cardHeart path {
+  fill: transparent;
+  stroke-width: 40px;
+  stroke: black;
+  transition: 0.5s;
+}
+.menu .menuTitleBloc .cardHeart:hover path {
+  fill: red;
+  stroke: red;
 }
 .menu .menuGrid {
   display: grid;
@@ -383,7 +395,7 @@ p {
   background-color: white;
   box-shadow: 3px 3px 3px 3px #cecece;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 0px;
   height: 4rem;
   width: 100%;
   position: relative;
@@ -394,14 +406,13 @@ p {
   cursor: pointer;
 }
 .menu .menuGrid .columnRow:hover .validation {
-  display: block;
-  position: absolute;
+  position: relative;
   background-color: #99e2d0;
+  width: 30%;
+  opacity: 1;
+  visibility: visible;
   border-radius: 0 15px 15px 0;
-  right: 0px;
-  padding: 0 13px;
   height: 100%;
-  animation: slide-left 0.5s ease;
 }
 .menu .menuGrid .columnRow:hover .validation i {
   font-size: 30px;
@@ -410,13 +421,14 @@ p {
   animation: rotate 0.5s both;
 }
 .menu .menuGrid .columnRow .platesPrice {
+  padding: 1rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .menu .menuGrid .columnRow .platesPrice .rowTextBox {
-  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 .menu .menuGrid .columnRow .platesPrice .rowTextBox .rowTextName p {
@@ -433,18 +445,14 @@ p {
   padding-right: 20px;
   margin-left: 20px;
 }
-.menu .menuGrid .columnRow .platesPrice .rowTextBox .rowPrice:hover .rowPrice {
-  padding-right: 70px;
-  transition: 0.5s ease;
-}
 .menu .menuGrid .validation {
-  display: none;
-  position: absolute;
   background-color: #99e2d0;
+  width: 0%;
   border-radius: 0 15px 15px 0;
-  right: 0px;
-  padding: 0 13px;
   height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
 }
 .menu .menuGrid .validation i {
   padding: 15px;
@@ -567,5 +575,7 @@ p {
   margin-right: 10px;
   color: white;
 }
+
+/*RESPONSIVE*/
 
 /*# sourceMappingURL=style.css.map */

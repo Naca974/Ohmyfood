@@ -10,6 +10,8 @@ $backFooter: #353535;
 $primaryColor:#9356dc;
 $secondaryColor:#ff79da;
 $tertiaryColor:#99e2d0;
+$customBackColor:#f8f2ff;
+
 body{
     font-size: $fontSize;
 }
@@ -203,7 +205,10 @@ p{
         align-items: center;
         cursor: pointer;
         &:hover{
-            background-color: white;
+            .fas{
+                color: $primaryColor;
+            }
+            background-color: $customBackColor;
             box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 40%);
             transition-duration: 300ms;
             cursor: pointer;
@@ -228,11 +233,9 @@ p{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    row-gap: 2rem;
     .restaurantCards{
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
         padding: 1rem;
     }
     .card{
@@ -242,6 +245,12 @@ p{
         justify-content: center;
         width: 100%;
         border-radius: 20px;
+        
+        a{
+            margin-bottom: 2rem;
+            box-shadow: 0px 3px 4px rgb(206, 206, 206);
+            border-radius: 20px;
+        }
     }
     .cardImg{
         height: 160px;
@@ -276,15 +285,20 @@ p{
             .cardName{
                 font-weight: bold;
             }
-            .cardHeart{
-                position: absolute;
-                right: 18px;
-                bottom: 20px;
-                i{
-                    font-size: 1.4rem;
-                }
-                .far{
-                    right: 0.8px;
+        }
+        .cardHeart{
+            margin-right: 1.5rem;
+            width: 1.5rem;
+            path{
+                fill: transparent;
+                stroke-width: 40px;
+                stroke: black;
+                transition: 0.5s;
+            }
+            &:hover{
+                path{
+                    fill: red;
+                    stroke: red;
                 }
             }
         }
@@ -321,14 +335,19 @@ p{
             font-family: $policeTitle;
         }
         .cardHeart{
-            right: 0px;
-            bottom: 0px;
-            i{
-                font-size: 1.4rem;
+            cursor: pointer;
+            width: 1.5rem;
+            path{
+                fill: transparent;
+                stroke-width: 40px;
+                stroke: black;
+                transition: 0.5s;
             }
-            .far{
-                cursor: pointer;
-                right: 0px;
+            &:hover{
+                path{
+                    fill: red;
+                    stroke: red;
+                }
             }
         }
     }
@@ -357,7 +376,7 @@ p{
             background-color: white;
             box-shadow: 3px 3px 3px 3px rgb(206, 206, 206);
             border-radius: 15px;
-            padding: 1rem;
+            padding: 0px;
             height: 4rem;
             width: 100%;
             position: relative;
@@ -367,29 +386,28 @@ p{
             align-items: center;
             cursor: pointer;
             &:hover .validation{
-                    display: block;
-                    position: absolute;
+                    position: relative;
                     background-color: $tertiaryColor;
+                    width: 30%;
+                    opacity: 1;
+                    visibility: visible;
                     border-radius: 0 15px 15px  0;
-                    right: 0px;
-                    padding: 0 13px;
                     height: 100%;
-                    animation: slide-left 0.5s ease;
                     i{
                         font-size: 30px;
                         color: white;
                         transform: rotate(180deg);
                         animation: rotate 0.5s both;
                     }
-                }
-            
+                }    
             .platesPrice{
+                padding: 1rem;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 .rowTextBox{
-                    white-space: nowrap;
+                    text-overflow: ellipsis;
                     overflow: hidden;
                     .rowTextName p{
                         font-weight: bold;
@@ -404,22 +422,18 @@ p{
                     .rowPrice{
                         padding-right: 20px;
                         margin-left: 20px;
-                        &:hover .rowPrice{
-                            padding-right: 70px;
-                            transition: 0.5s ease;
-                        }
                     }
                 }
             }
         }
             .validation{
-                display: none;
-                position: absolute;
                 background-color: $tertiaryColor;
+                width: 0%;                
                 border-radius: 0 15px 15px  0;
-                right: 0px;
-                padding: 0 13px;
                 height: 100%;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.8s;
                 i{
                     padding: 15px;
                     font-size: 30px;
@@ -550,3 +564,5 @@ p{
         }
     }
 }
+
+/*RESPONSIVE*/
