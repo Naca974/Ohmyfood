@@ -161,6 +161,7 @@ p{
     }
     .searchButton{
         font-weight: bold;
+        font-size: 0.9rem;
         color: white;
         border-radius: 50px;
         border: none;
@@ -287,19 +288,28 @@ p{
             }
         }
         .cardHeart{
+            position: relative;
             margin-right: 1.5rem;
             width: 1.5rem;
-            path{
-                fill: transparent;
-                stroke-width: 40px;
-                stroke: black;
-                transition: 0.5s;
-            }
-            &:hover{
+            .heartFull{
+                position: absolute;
                 path{
-                    fill: red;
-                    stroke: red;
-                }
+                    fill: url(#heartColor);
+                    stroke: url(#heartColor);
+                    opacity: 0;
+                    &:hover{
+                        opacity: 1;
+                        transition: 0.5s;
+                    }
+                } 
+            }
+            .heartEmpty{
+                path{
+                    fill: white;
+                    stroke: black;
+                    stroke-width: 20px;
+                    position: relative;
+                } 
             }
         }
     }
@@ -335,19 +345,29 @@ p{
             font-family: $policeTitle;
         }
         .cardHeart{
-            cursor: pointer;
+            position: relative;
+            margin-right: 1.5rem;
             width: 1.5rem;
-            path{
-                fill: transparent;
-                stroke-width: 40px;
-                stroke: black;
-                transition: 0.5s;
-            }
-            &:hover{
+            cursor: pointer;
+            .heartFull{
+                position: absolute;
                 path{
-                    fill: red;
-                    stroke: red;
-                }
+                    fill: url(#heartColor);
+                    stroke: url(#heartColor);
+                    opacity: 0;
+                    &:hover{
+                        opacity: 1;
+                        transition: 0.5s;
+                    }
+                } 
+            }
+            .heartEmpty{
+                path{
+                    fill: white;
+                    stroke: black;
+                    stroke-width: 20px;
+                    position: relative;
+                } 
             }
         }
     }
@@ -428,6 +448,8 @@ p{
         }
             .validation{
                 background-color: $tertiaryColor;
+                display: flex;
+                justify-content:center;
                 width: 0%;                
                 border-radius: 0 15px 15px  0;
                 height: 100%;

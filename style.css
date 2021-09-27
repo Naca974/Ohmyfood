@@ -188,6 +188,7 @@ p {
 }
 .search .searchButton {
   font-weight: bold;
+  font-size: 0.9rem;
   color: white;
   border-radius: 50px;
   border: none;
@@ -312,18 +313,27 @@ p {
   font-weight: bold;
 }
 .restaurants .cardTextBloc .cardHeart {
+  position: relative;
   margin-right: 1.5rem;
   width: 1.5rem;
 }
-.restaurants .cardTextBloc .cardHeart path {
-  fill: transparent;
-  stroke-width: 40px;
-  stroke: black;
+.restaurants .cardTextBloc .cardHeart .heartFull {
+  position: absolute;
+}
+.restaurants .cardTextBloc .cardHeart .heartFull path {
+  fill: url(#heartColor);
+  stroke: url(#heartColor);
+  opacity: 0;
+}
+.restaurants .cardTextBloc .cardHeart .heartFull path:hover {
+  opacity: 1;
   transition: 0.5s;
 }
-.restaurants .cardTextBloc .cardHeart:hover path {
-  fill: red;
-  stroke: red;
+.restaurants .cardTextBloc .cardHeart .heartEmpty path {
+  fill: white;
+  stroke: black;
+  stroke-width: 20px;
+  position: relative;
 }
 
 /*IMAGE RESTAURANT PAGES*/
@@ -356,18 +366,28 @@ p {
   font-family: "shrikhand", serif;
 }
 .menu .menuTitleBloc .cardHeart {
-  cursor: pointer;
+  position: relative;
+  margin-right: 1.5rem;
   width: 1.5rem;
+  cursor: pointer;
 }
-.menu .menuTitleBloc .cardHeart path {
-  fill: transparent;
-  stroke-width: 40px;
-  stroke: black;
+.menu .menuTitleBloc .cardHeart .heartFull {
+  position: absolute;
+}
+.menu .menuTitleBloc .cardHeart .heartFull path {
+  fill: url(#heartColor);
+  stroke: url(#heartColor);
+  opacity: 0;
+}
+.menu .menuTitleBloc .cardHeart .heartFull path:hover {
+  opacity: 1;
   transition: 0.5s;
 }
-.menu .menuTitleBloc .cardHeart:hover path {
-  fill: red;
-  stroke: red;
+.menu .menuTitleBloc .cardHeart .heartEmpty path {
+  fill: white;
+  stroke: black;
+  stroke-width: 20px;
+  position: relative;
 }
 .menu .menuGrid {
   display: grid;
@@ -447,6 +467,8 @@ p {
 }
 .menu .menuGrid .validation {
   background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
   width: 0%;
   border-radius: 0 15px 15px 0;
   height: 100%;
