@@ -197,11 +197,13 @@ p {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   margin: 10px 0 30px 0;
   cursor: pointer;
+  opacity: 1;
 }
 .search .searchButton:hover {
   transform: scale(1.06);
   transition-duration: 300ms;
   cursor: pointer;
+  opacity: 0.8;
 }
 
 /*CUSTOM STEPS*/
@@ -263,6 +265,7 @@ p {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  gap: 1rem;
 }
 .restaurants .card {
   position: relative;
@@ -512,11 +515,13 @@ p {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   margin: 30px 0 25px 0;
   cursor: pointer;
+  opacity: 1;
 }
 .menu .menuBtnBloc .menuBtn:hover {
   transform: scale(1.06);
   transition-duration: 300ms;
   cursor: pointer;
+  opacity: 0.8;
 }
 
 .appearance {
@@ -599,5 +604,54 @@ p {
 }
 
 /*RESPONSIVE*/
+@media screen and (min-width: 900px) {
+  /*RESPONSIVE CUSTOM STEPS*/
+  .customContainer {
+    margin: 0px;
+    width: 100%;
+  }
+  .customContainer .customStepsGrid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .customContainer .customStepsGrid .customStep {
+    width: 70%;
+  }
+
+  /*RESPONSIVE RESTAURANT CARDS*/
+  .restaurants {
+    display: grid;
+  }
+  .restaurants .restaurantCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+
+  /*RESPONSIVE RESTAURANT MENU*/
+  .menuGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 2rem;
+  }
+
+  /*RESPONSIVE FOOTER*/
+  .footer .footerBloc {
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .footer .footerBloc .footerLogo {
+    font-size: 20px;
+  }
+  .footer .footerBloc .footerLinksBox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 950px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
