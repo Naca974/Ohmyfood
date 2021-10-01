@@ -429,8 +429,12 @@ p{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
                 .rowTextBox{
                     text-overflow: ellipsis;
+                    white-space: nowrap;
                     overflow: hidden;
                     .rowTextName p{
                         font-weight: bold;
