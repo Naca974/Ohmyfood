@@ -468,9 +468,9 @@ p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu .menuGrid .columnRow .platesPrice .rowTextBox .rowPrice {
+.menu .menuGrid .columnRow .platesPrice .RowPrice {
   padding-right: 20px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 .menu .menuGrid .validation {
   background-color: #99e2d0;
