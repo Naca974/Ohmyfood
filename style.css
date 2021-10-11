@@ -164,6 +164,7 @@ p {
   color: #575757;
   border: none;
   text-align: center;
+  outline: none;
 }
 .searchBar .location .locationName {
   margin-left: 13px;
