@@ -201,7 +201,7 @@ p {
   color: white;
   border-radius: 50px;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 15px 1px rgba(0, 0, 0, 0.2);
   padding: 15px 20px 15px 20px;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   margin: 10px 0 30px 0;
@@ -505,14 +505,6 @@ p {
     transform: rotate(360deg);
   }
 }
-@keyframes slide-left {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(-50px);
-  }
-}
 .menu .menuBtnBloc {
   display: flex;
   justify-content: center;
@@ -523,7 +515,7 @@ p {
   color: white;
   border-radius: 50px;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 15px 1px rgba(0, 0, 0, 0.2);
   padding: 15px 20px 15px 20px;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   margin: 30px 0 25px 0;
