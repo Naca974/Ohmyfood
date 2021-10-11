@@ -11,6 +11,7 @@ $primaryColor:#9356dc;
 $secondaryColor:#ff79da;
 $tertiaryColor:#99e2d0;
 $customBackColor:#f8f2ff;
+$newColor:#0a8d6d;
 
 body{
     font-size: $fontSize;
@@ -123,19 +124,27 @@ p{
 
 /*LOCATION*/
 
-.location{
-    background-color: rgb(234, 234, 234);
-    padding: 10px 0;
+.searchBar{
     display: flex;
     justify-content: center;
-    color: rgb(87,87,87);
-    .locationName{
-        margin-left: 13px;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    .location{
+        background-color: rgb(234, 234, 234);
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        color: rgb(87,87,87);
+        border: none;
+        text-align: center;
+        .locationName{
+            margin-left: 13px;
+        }
     }
 }
-
-.locationIcon, .locationName{
+.locationIcon{
     display: inline-block;
+    margin-right: 5px;
 }
 
 /*SEARCH AREA*/
@@ -200,7 +209,6 @@ p{
         padding: 15px 0px;
         background-color: $backGrey;
         position: relative;
-        box-shadow: 0px 0px 2px 0px;
         margin: 10px 20px;
         border-radius: 20px;
         border: none;
@@ -268,6 +276,7 @@ p{
         padding: 5px 15px;
         top: 20px;
         right: 20px;
+        color: $newColor;
     }
     .img{
         width: 100%;
