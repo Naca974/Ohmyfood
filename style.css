@@ -343,7 +343,7 @@ p {
   transition: 0.5s;
 }
 .restaurants .cardTextBloc .cardHeart .heartEmpty path {
-  fill: white;
+  fill: transparent;
   stroke: black;
   stroke-width: 20px;
   position: relative;
@@ -397,7 +397,7 @@ p {
   transition: 0.5s;
 }
 .menu .menuTitleBloc .cardHeart .heartEmpty path {
-  fill: white;
+  fill: transparent;
   stroke: black;
   stroke-width: 20px;
   position: relative;
